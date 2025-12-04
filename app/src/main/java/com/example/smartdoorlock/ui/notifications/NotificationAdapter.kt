@@ -54,14 +54,15 @@ class NotificationAdapter(private val logs: List<NotificationItem>) :
             holder.imgIcon.setColorFilter(Color.parseColor("#2563EB"))
 
             holder.txtState?.text = "UNLOCK"
-            holder.txtState?.setTextColor(Color.parseColor("#10B981")) // 초록색
+            holder.txtState?.setTextColor(Color.parseColor("#2563EB")) // 초록색
 
         } else {
             // 🔒 잠김 상태 (LOCK, CLOSE 등)
             holder.txtTitle.text = "🔒 문이 잠겼습니다"
             holder.txtTitle.setTextColor(Color.parseColor("#DC2626")) // 빨간색
 
-            holder.imgIcon.setImageResource(android.R.drawable.ic_lock_idle_lock)
+            // [수정] android.R.drawable.ic_lock_idle_lock 대신 R.drawable.ic_lock_idle_lock 사용
+            holder.imgIcon.setImageResource(R.drawable.ic_lock_idle_lock)
             holder.imgIcon.setColorFilter(Color.parseColor("#DC2626"))
 
             holder.txtState?.text = "LOCK"
