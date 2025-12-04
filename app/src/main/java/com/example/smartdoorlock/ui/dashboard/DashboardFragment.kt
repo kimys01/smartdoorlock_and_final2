@@ -41,8 +41,8 @@ class DashboardFragment : Fragment() {
         private const val TAG = "DashboardFragment"
 
         // UI 색상 상수
-        private const val COLOR_LOCKED = "#4CAF50"      // 초록색
-        private const val COLOR_LOCKED_BG = "#E8F5E9"
+        private const val COLOR_LOCKED = "#DC2626"      // 빨간색 (LOCK은 위험/정지를 상징)
+        private const val COLOR_LOCKED_BG = "#FEE2E2"
         private const val COLOR_UNLOCKED = "#2196F3"    // 파란색
         private const val COLOR_UNLOCKED_BG = "#E3F2FD"
         private const val COLOR_OFFLINE = "#9E9E9E"     // 회색
@@ -175,17 +175,17 @@ class DashboardFragment : Fragment() {
         var iconRes = android.R.drawable.ic_lock_idle_lock
 
         if (isUnlocked) {
-            // [열림 상태]
+            // [열림 상태] - 파란색 유지
             statusText = "문이 열렸습니다"
             themeColor = Color.parseColor(COLOR_UNLOCKED)
             bgColor = Color.parseColor(COLOR_UNLOCKED_BG)
-            iconRes = R.drawable.ic_lock_open
+            iconRes = R.drawable.ic_lock_open // 수정된 굵은 선의 열림 아이콘
         } else {
-            // [닫힘 상태]
+            // [닫힘 상태] - 초록색에서 빨간색으로 변경
             statusText = "문이 닫혔습니다"
-            themeColor = Color.parseColor(COLOR_LOCKED)
-            bgColor = Color.parseColor(COLOR_LOCKED_BG)
-            iconRes = android.R.drawable.ic_lock_idle_lock
+            themeColor = Color.parseColor(COLOR_LOCKED) // <-- 빨간색 적용
+            bgColor = Color.parseColor(COLOR_LOCKED_BG) // <-- 연한 빨간색 배경 적용
+            iconRes = R.drawable.ic_lock_idle_lock // 굵은 선의 잠금 아이콘
         }
 
         binding.txtStatus.text = statusText
@@ -199,7 +199,7 @@ class DashboardFragment : Fragment() {
         binding.tvUnlockLabel.text = if (isUnlocked) "문 잠그기" else "문 열기"
         binding.imgUnlockBtnIcon.setColorFilter(themeColor)
         binding.imgUnlockBtnIcon.setImageResource(
-            if (isUnlocked) android.R.drawable.ic_lock_idle_lock // 잠그기 아이콘
+            if (isUnlocked) R.drawable.ic_lock_idle_lock // 잠그기 아이콘 (수정된 굵은 선 아이콘)
             else R.drawable.ic_lock_open // 열기 아이콘
         )
 
