@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    tools:context=".ui.login.LoginFragment">
+
+    <!--  본문 영역  -->
+    <LinearLayout
+        android:id="@+id/loginContent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/textLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SD"
+            android:textSize="72sp"
+            android:textStyle="bold"
+            android:textColor="#7C3AED"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="sans-serif-black"
+            tools:text="SD"/>
+
+        <TextView
+            android:id="@+id/textServiceName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SmartDoorLock"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginBottom="40dp"/>
+
+        <EditText
+            android:id="@+id/editTextId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="아이디 입력"
+            android:textColor="#000000"
+            android:textColorHint="#888888"
+            android:inputType="text"/>
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:hint="패스워드 입력"
+            android:textColor="#000000"
+            android:textColorHint="#888888"
+            android:inputType="textPassword"/>
+
+        <!-- 로그인 버튼 -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="로그인"
+            android:background="@drawable/gradient_button_background"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"/>
+
+        <!-- 회원가입 버튼 -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="회원가입"
+            android:background="@drawable/gradient_button_background"
+            android:alpha="0.8"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp">
+
+            <CheckBox
+                android:id="@+id/checkboxAutoLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="자동 로그인"
+                android:checked="false"
+                android:textColor="#555555"
+                android:textSize="14sp"/>
+
+            <CheckBox
+                android:id="@+id/checkboxSaveId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="아이디 저장"
+                android:textColor="#555555"
+                android:textSize="14sp"/>
+
+            <!-- [추가] 비밀번호 찾기 링크 -->
+            <TextView
+                android:id="@+id/textFindPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="비밀번호를 잊으셨나요?"
+                android:textSize="14sp"
+                android:textColor="#2196F3"
+                android:textStyle="bold"
+                android:layout_gravity="end"
+                android:layout_marginTop="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

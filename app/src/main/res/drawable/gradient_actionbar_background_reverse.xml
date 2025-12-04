@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+파일: res/drawable/gradient_button_background.xml
+목적: 그라데이션 버튼 배경을 정의합니다.
+-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!--
+    그라데이션을 정의합니다.
+    colors.xml의 'web_gradient_start'와 'web_gradient_end' 색상을 사용합니다.
+    -->
+    <gradient
+        android:startColor="@color/web_gradient_start"
+        android:endColor="@color/web_gradient_end"
+        android:angle="0"
+        android:type="linear" />
+
+    <!--
+    버튼을 더 현대적으로 보이게 하기 위해 둥근 모서리를 추가합니다.
+    -->
+
+</shape>

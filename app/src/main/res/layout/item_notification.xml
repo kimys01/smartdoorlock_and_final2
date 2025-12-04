@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="6dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="#FFFFFF"
+    android:foreground="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        android:gravity="center_vertical">
+
+        <!-- 좌측: 아이콘 + 세로선 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <!-- 상태 아이콘 영역 (그라데이션 배경) -->
+            <FrameLayout
+                android:id="@+id/frameIconBackground"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:background="@drawable/gradient_button_background">
+                <!-- gradient_button_background를 사용하여 통일감 -->
+
+                <ImageView
+                    android:id="@+id/imgLogIcon"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center"
+                    android:src="@android:drawable/ic_lock_idle_lock"
+                    app:tint="#FFFFFF"
+                    tools:ignore="ContentDescription" />
+            </FrameLayout>
+
+            <!-- 타임라인 세로선 (선택사항) -->
+            <View
+                android:id="@+id/viewTimeline"
+                android:layout_width="2dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#E0E0E0"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <!-- 중앙: 로그 정보 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="12dp"
+            android:orientation="vertical">
+
+            <!-- 로그 제목 (상태) -->
+            <TextView
+                android:id="@+id/txtLogTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="문이 열렸습니다"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="#1F2937"
+                android:letterSpacing="0.01"/>
+
+            <!-- 사용자 정보 + 방법 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="6dp"
+                android:gravity="center_vertical">
+
+                <!-- 사용자 이름 -->
+                <TextView
+                    android:id="@+id/txtLogUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="홍길동"
+                    android:textSize="14sp"
+                    android:textColor="#6B7280"
+                    android:textStyle="normal"/>
+
+                <!-- 구분자 -->
+                <View
+                    android:layout_width="4dp"
+                    android:layout_height="4dp"
+                    android:layout_marginHorizontal="8dp"
+                    android:background="@drawable/circle_background"
+                    android:backgroundTint="#D1D5DB"/>
+
+                <!-- 방법 배지 -->
+                <TextView
+                    android:id="@+id/txtLogMethod"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="4dp"
+                    android:background="@drawable/edit_text_background"
+                    android:backgroundTint="#F3F4F6"
+                    tools:text="APP"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:textColor="#6366F1"/>
+            </LinearLayout>
+
+            <!-- 시간 표시 (작은 텍스트) -->
+            <TextView
+                android:id="@+id/txtLogDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="2025-11-27 14:30:25"
+                android:textSize="12sp"
+                android:textColor="#9CA3AF"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+        <!-- 우측: 큰 시간 표시 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="end">
+
+            <!-- 시간 -->
+            <TextView
+                android:id="@+id/txtLogTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="14:30"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#374151"/>
+
+            <!-- 상태 표시 (LOCK/UNLOCK) -->
+            <TextView
+                android:id="@+id/txtLogState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="UNLOCK"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:textColor="#10B981"
+                android:layout_marginTop="2dp"
+                android:letterSpacing="0.05"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- 하단 구분선 (선택사항) -->
+    <View
+        android:id="@+id/viewDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:background="#F3F4F6"
+        android:layout_marginStart="76dp"
+        android:visibility="gone"/>
+
+</androidx.cardview.widget.CardView>

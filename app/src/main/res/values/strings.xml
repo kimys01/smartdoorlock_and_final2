@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">smartdoorlock</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_dashboard">Smart Door Lock</string>
+    <string name="title_notifications">Notifications</string>
+</resources>

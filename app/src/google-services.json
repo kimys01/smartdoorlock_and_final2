@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "104489505270",
+    "project_id": "smartdoorlock-b4636",
+    "storage_bucket": "smartdoorlock-b4636.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:104489505270:android:8c1aa343f704409d2077d7",
+        "android_client_info": {
+          "package_name": "com.example.smartdoorlock"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFFV8ohjdOzsBPjyUusdTgcKtS8QL_joo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

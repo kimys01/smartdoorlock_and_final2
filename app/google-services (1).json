@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "104489505270",
+    "firebase_url": "https://smartdoorlock-b4636-default-rtdb.firebaseio.com",
+    "project_id": "smartdoorlock-b4636",
+    "storage_bucket": "smartdoorlock-b4636.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:104489505270:android:8c1aa343f704409d2077d7",
+        "android_client_info": {
+          "package_name": "com.example.smartdoorlock"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "104489505270-22kacjbtjhsspkkbgskpocu17u0vlmp6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.smartdoorlock",
+            "certificate_hash": "9f24339f4d01673204a906497ab2677d64fb953f"
+          }
+        },
+        {
+          "client_id": "104489505270-7o5llqlnaolcbjhubg0dk5qol9fci1sj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFFV8ohjdOzsBPjyUusdTgcKtS8QL_joo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "104489505270-7o5llqlnaolcbjhubg0dk5qol9fci1sj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <!-- React의 bg-gray-100 색상 (#F3F4F6)과 유사한 연한 회색 -->
+    <solid android:color="#F3F4F6" />
+</shape>

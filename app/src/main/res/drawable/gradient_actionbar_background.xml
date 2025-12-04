@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 액션바용: 오른쪽/아래에만 살짝 그림자 있는 입체 효과 -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 아래·오른쪽 면 그림자 레이어 -->
+    <item
+        android:left="0dp"
+        android:top="0dp"
+        android:right="2dp"
+        android:bottom="2dp">
+        <shape android:shape="rectangle">
+            <!-- 투명 ~ 반투명 검정으로 그라데이션: 아래로 갈수록 진해짐 -->
+            <gradient
+                android:startColor="@android:color/transparent"
+                android:endColor="#33000000"
+                android:angle="90" />
+
+        </shape>
+    </item>
+
+    <!-- 실제 원래 액션바 그라데이션 배경 -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="@color/web_gradient_start"
+                android:endColor="@color/web_gradient_end"
+                android:angle="45"
+                android:type="linear" />
+        </shape>
+    </item>
+
+</layer-list>
